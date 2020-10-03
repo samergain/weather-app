@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Weather</title>
+</head>
+<body>
+    <header>
+        <h1>Weather</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 bg-light border mt-3" id="search-container">
+                <div class="row">
+                    <div class="col-12 mt-3" id="search-box">
+                        <h3>Search of a city:</h3>
+                        <div class="input-group mb-3">
+                            <input type="text" id="search-text" class="form-control" placeholder="Type city name" aria-label="Type city name" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button" id="search-btn">Search</button>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-4" id="history">
+                        <div class="card" style="width: 22rem;">
+                            <ul id="searchHistory" class="list-group list-group-flush">
+                              <li class="list-group-item">Cras justo odio</li>
+                              <li class="list-group-item">Dapibus ac facilisis in</li>
+                              <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8" id="result-container">
+                <div class="row">
+                    <div class="col-12 mt-3" id="city-main">
+                        <div class="jumbotron py-3 border">
+                            <h3 class="display-7">City Name</h3>
+                            <p>Temprature: </p>
+                            <p>Humidity: </p>
+                            <p>Wind Spead: </p>
+                            <p>UV Index: </p>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" id="five-days">
+                        <div class="row">
+                            <h3>5 Days Forcast:</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col bg-primary">
+                                      <h5>Card title</h5>
+                                      <p>Card subtitle</p>
+                                      <p>Some quick example text.</p>
+                            </div>
+                            <div class="col bg-light">
+                                    <h5>Card title</h5>
+                                    <p>Card subtitle</p>
+                                    <p>Some quick example text.</p>
+                            </div>
+                            <div class="col bg-dark">
+                                <h5>Card title</h5>
+                                <p>Card subtitle</p>
+                                <p>Some quick example text.</p>
+                            </div>
+                            <div class="col bg-warning">
+                                <h5>Card title</h5>
+                                <p>Card subtitle</p>
+                                <p>Some quick example text.</p>
+                            </div>
+                            <div class="col bg-danger">
+                                <h5>Card title</h5>
+                                <p>Card subtitle</p>
+                                <p>Some quick example text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
