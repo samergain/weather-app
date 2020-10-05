@@ -1,19 +1,17 @@
-.color-primary-0 { color: #265B6A }	/* Main Primary color */
-.color-primary-1 { color: #6C939F }
-.color-primary-2 { color: #447684 }
-.color-primary-3 { color: #0F414F }
-.color-primary-4 { color: #022A35 }
-
-.color-primary-0 { color: #88CF75 }	/* Main Primary color */
-.color-primary-1 { color: #D5F1CE }
-.color-primary-2 { color: #B0E3A2 }
-.color-primary-3 { color: #5DAD48 }
-.color-primary-4 { color: #3D8E27 }
-
 header {
     width: 100%;
     height: 100px;
     background-color: #3D8E27;
     color: #022A35;
     text-align: center;
+}
+
+img {
+    height: 60px;
+    width: 60px;
+}
+
+span {
+    border-radius: 0.2rem;
+    padding: 2px;
 }
