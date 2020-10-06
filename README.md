@@ -13,6 +13,7 @@ Search for a city in the U.S. get current weather and 5 days forecast for that c
 * [deployed application](https://samergain.github.io/weather-app/)
 
 # Screenshot 
+![large](largeLayout.png)
 
 # Future Improvements:
 * Improve the forecast function to return only days with 12.00 time 
