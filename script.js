@@ -12,14 +12,18 @@ function currentWeather(cityName) {
     method: "GET"
      })
     .then(function(response) {
-        var weatherIconURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
-        $("#cityName").html(response.name + " (" + currentDate + ")" + "<img src='" + weatherIconURL + "' alt='current weather'>");
-        $("#temp").text("Temprature: " + response.main.temp + " F");
-        $("#humidity").text("Humidity: " + response.main.humidity);
-        $("#windSpeed").html("Wind Speed: " + response.wind.speed);
-        var latitude = response.coord.lat;
-        var longtitude = response.coord.lon;
-        uvIndex(latitude, longtitude);
+        if(!response.name) {
+            console.log("no city was found!")
+        } else {
+            var weatherIconURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
+            $("#cityName").html(response.name + " (" + currentDate + ")" + "<img src='" + weatherIconURL + "' alt='current weather'>");
+            $("#temp").text("Temprature: " + response.main.temp + " F");
+            $("#humidity").text("Humidity: " + response.main.humidity);
+            $("#windSpeed").html("Wind Speed: " + response.wind.speed);
+            var latitude = response.coord.lat;
+            var longtitude = response.coord.lon;
+            uvIndex(latitude, longtitude);
+        }
     });
 }
 //Current UV Index in selected city
@@ -52,13 +56,14 @@ function forecast(cityName) {
     method: "GET"
     })
     .then(function(response) { 
+        console.log(response.list);
         var forecastList = response.list;
         var forecastDiv = $("#five-days");
         forecastDiv.empty();
         //loop over the list starting with item 7 (to insure starting with tomorrow)
         //then jump 8 items (8*3=24 hours) to the next day
-        for (var i=5; i < forecastList.length; i+=8) {
-            var cardDiv = $("<div>").attr("class","col bg-light mr-2");
+        for (var i=7; i < forecastList.length; i+=8) {
+            var cardDiv = $("<div>").attr("class","col bg-primary mr-2 dailyCards");
             var elemDate = forecastList[i].dt_txt;
             var splitDate = elemDate.split(" ")[0];
             var cardDate = $("<h6>").attr("class","mt-2").text(splitDate);
@@ -78,13 +83,13 @@ function forecast(cityName) {
 $("#search-btn").on("click", function(){
     event.preventDefault();
     var searchInput = $("#search-text").val().trim();
+    currentWeather(searchInput);
+        forecast(searchInput);
     if (searchInput !== ""){
         savedCities.unshift(searchInput);
         localStorage.setItem(key, JSON.stringify(savedCities));
         var cityListItem = $("<li>").attr("class","list-group-item").text($("#search-text").val());
         $("#searchHistory").prepend(cityListItem);
-        currentWeather(searchInput);
-        forecast(searchInput);
     } else {
         return;
     }

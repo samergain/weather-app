@@ -5,7 +5,11 @@ header {
     color: #022A35;
     text-align: center;
 }
-
+header i {
+    color: white;
+    height: 40px;
+    width: 40px;
+}
 img {
     height: 60px;
     width: 60px;
@@ -14,4 +18,8 @@ img {
 span {
     border-radius: 0.2rem;
     padding: 2px;
+}
+
+.dailyCards {
+    border-radius: 8px;
 }

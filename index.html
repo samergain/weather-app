@@ -7,6 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/733386ec1e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     
     <title>Weather</title>
@@ -14,7 +15,13 @@
 <body>
     <header>
         <h1>Weather</h1>
-        <h5>Search Cities in the U.S.</h5>
+        <i class="fas fa-cloud-rain"></i>
+        <i class="far fa-sun"></i>
+        <i class="fas fa-umbrella"></i>
+        <i class="fas fa-smog"></i>
+        <i class="fas fa-wind"></i>
+        <i class="far fa-snowflake"></i>
+        <i class="fas fa-cloud-showers-heavy"></i>
     </header>
     <div class="container">
         <div class="row">
@@ -22,6 +29,7 @@
                 <div class="row">
                     <div class="col-12 mt-3" id="search-box">
                         <h3>Search of a city:</h3>
+                   
                         <div class="input-group mb-3">
                             <input type="text" id="search-text" class="form-control" placeholder="Type city name" aria-label="Type city name" aria-describedby="button-addon2">
                             <div class="input-group-append">
@@ -43,7 +51,7 @@
             <div class="col-12 col-xl-8" id="result-container">
                 <div class="row">
                     <div class="col-12 mt-3 ml-3" id="city-main">
-                        <div id="current-weather" class="jumbotron py-3 border">
+                        <div id="current-weather" class="jumbotron py-3 border bg-primary">
                             <!--text content added from script.js-->
                             <h3 id="cityName"></h3>
                             <p id="temp"></p>
