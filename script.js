@@ -28,7 +28,7 @@ function currentWeather(cityName) {
 }
 //Current UV Index in selected city
 function uvIndex(lat,lon) {
-    var uvURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=0ee12c32cce8e87dbfe9e6d43d3583a0";
+    var uvURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=0ee12c32cce8e87dbfe9e6d43d3583a0";
     $.ajax({
         url: uvURL,
         method: "GET"
