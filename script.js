@@ -15,7 +15,7 @@ function currentWeather(cityName) {
         if(!response.name) {
             console.log("no city was found!")
         } else {
-            var weatherIconURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
+            var weatherIconURL = "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
             $("#cityName").html(response.name + " (" + currentDate + ")" + "<img src='" + weatherIconURL + "' alt='current weather'>");
             $("#temp").text("Temprature: " + response.main.temp + " F");
             $("#humidity").text("Humidity: " + response.main.humidity);
@@ -90,6 +90,7 @@ $("#search-btn").on("click", function(){
         localStorage.setItem(key, JSON.stringify(savedCities));
         var cityListItem = $("<li>").attr("class","list-group-item").text($("#search-text").val());
         $("#searchHistory").prepend(cityListItem);
+        $("#search-text").val("");
     } else {
         return;
     }
