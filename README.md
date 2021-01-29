@@ -4,8 +4,8 @@ Search for a city in the U.S. get current weather and 5 days forecast for that c
 
 # How Does It Work?
 
-* Connect to the weatheh API (openweathermap.org) to get information about the current weather and the next five days
-* Each searched item will be stored in the "History list"
+* Connect to the weather API (openweathermap.org) to get information about the current weather and the weather for the next five days
+* Each searched item will be stored in the "History list" (localStorage)
 
 # Links:
 
